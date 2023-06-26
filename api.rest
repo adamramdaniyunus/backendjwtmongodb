@@ -1,0 +1,74 @@
+GET http://localhost:5001/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDk2NjIxMGY1MGNmNTZhOGI2ZjE1NjkiLCJuYW1lIjoiQWRhbSIsImVtYWlsIjoiYWRhbUBnbWFpbC5jb20iLCJpYXQiOjE2ODc2NzAxMDMsImV4cCI6MTY4NzY3MDEyM30.GdjG3tSlWpJNnDwUxt-0G_2oHlcahRDmB9dnMofenNQ
+
+
+###
+GET http://localhost:5001/task
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDk2NjIxMGY1MGNmNTZhOGI2ZjE1NjkiLCJuYW1lIjoiQWRhbSIsImVtYWlsIjoiYWRhbUBnbWFpbC5jb20iLCJpYXQiOjE2ODc2NzgxMzksImV4cCI6MTY4NzY3ODE1OX0.1sNK8uGX5XdZWRRsOEXaZOij1XFh3OxkJE6E0SwLvmk
+###
+POST http://localhost:5001/user
+Content-Type: application/json
+
+{
+    "name": "Adam",
+    "email": "adam@gmail.com",
+    "password":"adamramdaniyunus",
+    "confpassword":"adamramdaniyunus"
+}
+
+###
+PATCH http://localhost:5001/user/649664c9ca8a6b17cbd68722
+Content-Type: application/json
+
+{
+    "name": "Adam woy",
+    "email": "adam@gmail.com",
+    "password":"adamramdaniyunus",
+    "confpassword":"adamramdaniyunus"
+}
+
+###
+DELETE http://localhost:5001/user/649664c9ca8a6b17cbd68722
+
+###
+POST http://localhost:5001/login
+Content-Type: application/json
+
+{
+    "name": "Adam",
+    "password":"adamramdaniyunus"
+}
+
+###
+DELETE http://localhost:5001/logout
+
+
+###
+POST http://localhost:5001/task
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDk2NjIxMGY1MGNmNTZhOGI2ZjE1NjkiLCJuYW1lIjoiQWRhbSIsImVtYWlsIjoiYWRhbUBnbWFpbC5jb20iLCJpYXQiOjE2ODc2NzE3MjQsImV4cCI6MTY4NzY3MTc0NH0.3RdT9iU9_Ea_CIVDINN3oLaYWJCftoz20yck7Ii9cdI
+
+{
+    "taskName": "Tugas 2",
+    "dateTask": "2022-02-12",
+    "deadline":"2022-02-14",
+    "description":"ini adalah tugas 1"
+}
+
+###
+PATCH http://localhost:5001/task/6497e8403aeee4ccea35f4b0
+Content-Type: application/json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDk2NjIxMGY1MGNmNTZhOGI2ZjE1NjkiLCJuYW1lIjoiQWRhbSIsImVtYWlsIjoiYWRhbUBnbWFpbC5jb20iLCJpYXQiOjE2ODc2NzgxNzUsImV4cCI6MTY4NzY3ODE5NX0.WCQnykCTNkDZziDHX4l3urb55q1ImPLmUHV4ZHO8YGY
+
+{
+    "taskName": "Matematika revisi",
+    "dateTask": "2022-02-12",
+    "deadline":"2022-02-14",
+    "description":"ini adalah tugas 1"
+}
+
+###
+DELETE http://localhost:5001/task/6497d3b79c8f1c0229f43a88
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDk2NjIxMGY1MGNmNTZhOGI2ZjE1NjkiLCJuYW1lIjoiQWRhbSIsImVtYWlsIjoiYWRhbUBnbWFpbC5jb20iLCJpYXQiOjE2ODc2NzI2MTQsImV4cCI6MTY4NzY3MjYzNH0.L3wk7iXGN6GM82UlhKCQejHPiuur0zpoD66U8SUm_9g
+###
+GET http://localhost:5001/token
